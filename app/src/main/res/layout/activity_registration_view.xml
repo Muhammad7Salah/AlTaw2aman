@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@android:dimen/app_icon_size"
+    tools:context="com.example.ziko_.altaw2aman.RegistrationView">
+
+    <EditText
+        android:id="@+id/RegistrationEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="E-mail"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/RegistrationUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/RegistrationPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/RegistrationretypePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Re-type Password"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:id="@+id/RegisterButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="RegisterHomeView"
+        android:text="Register"/>
+
+</LinearLayout>
+
+</ScrollView>

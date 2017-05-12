@@ -34,7 +34,7 @@ public class TrackingChildService extends Service
             Log.e(TAG, "onLocationChanged: " + location);
             myLatitude = location.getLatitude();
             myLongitude = location.getLongitude();
-            //send location to database
+            //send location to Firebase database
             mLastLocation.set(location);
         }
 

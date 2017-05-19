@@ -5,42 +5,53 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:weightSum="5"
     tools:context="com.example.ziko_.altaw2aman.MainActivity">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:textSize="20dp"
         android:textColor="@color/colorPrimaryDark"
         android:gravity="center"
-        android:text="Al-Taw2amaan"/>
-    
+        android:text="Al-Taw2amaan"
+        android:layout_weight="2"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="2">
+
     <Button
         android:id="@+id/RegisterButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
         android:onClick="Registration"
-        android:text="Register"/>
+        android:text="Register"
+        android:layout_weight="1"/>
 
 
     <Button
         android:id="@+id/LoginButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
         android:onClick="Login"
-        android:text="Login"/>
+        android:text="Login"
+        android:layout_weight="1"/>
 
-    <TextView
+    </LinearLayout>
+    <Button
         android:id="@+id/ChildButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
         android:textSize="20dp"
         android:textColor="@android:color/holo_red_dark"
         android:clickable="true"
         android:onClick="Child"
-        android:text="Child"/>
+        android:text="Child"
+        android:layout_weight="1"/>
     
 </LinearLayout>

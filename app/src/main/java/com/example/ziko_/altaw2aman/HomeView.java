@@ -1,9 +1,11 @@
 package com.example.ziko_.altaw2aman;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class HomeView extends AppCompatActivity {
 
@@ -29,5 +31,10 @@ public class HomeView extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public void goToMap(View view) {
+
+        startActivity(new Intent(this,MapsActivity.class));
     }
 }

@@ -1,5 +1,8 @@
 package com.example.ziko_.altaw2aman;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -41,15 +44,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        mMap.setMyLocationEnabled(true);
-
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}
+                    , 1);
+        } else {
+            //or show errors
+            mMap.setMyLocationEnabled(true);
+        }
         // get child location from firebase and add marker
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Loli").snippet("Male").icon(BitmapDescriptorFactory.fromResource(R.drawable.babymale_web)));
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Loli").snippet("Male").icon(BitmapDescriptorFactory.fromResource(R.drawable.babys_room_96)));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
-
 
 
 }

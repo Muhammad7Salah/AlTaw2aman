@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">altaw2aman</string>
     <string name="title_activity_maps">Map</string>
+    <string name="auth_failed">Check the internet</string>
+
 
 </resources>
